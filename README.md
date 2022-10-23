@@ -24,12 +24,12 @@
 
 ### 5 .  项目的示例图：
 
-![](E:\Idea\takeaway\imges\1.png)
+![](https://github.com/AlanKafka/xiaosu-shop/blob/master/imges/1.png)
 
-![](E:\Idea\takeaway\imges\2.png)
+![](https://github.com/AlanKafka/xiaosu-shop/blob/master/imges/2.png)
 
-![](E:\Idea\takeaway\imges\3.png)
+![](https://github.com/AlanKafka/xiaosu-shop/blob/master/imges/3.png)
 
-![](E:\Idea\takeaway\imges\4.png)
+![](https://github.com/AlanKafka/xiaosu-shop/blob/master/imges/4.png)
 
-![5](E:\Idea\takeaway\imges\5.png)
+![5](https://github.com/AlanKafka/xiaosu-shop/blob/master/imges/5.png)
