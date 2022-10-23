@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小苏商城</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <div class="header section">
+
+        <!-- Header Bottom Start -->
+        <div class="header-bottom">
+            <div class="header-sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+
+                        <!-- Header Logo Start -->
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <div class="header-logo">
+                                <a href="index.html"><img src="assets/images/logo/logo.png" alt="Site Logo" /></a>
+                            </div>
+                        </div>
+                        <!-- Header Logo End -->
+
+                        <!-- Header Menu Start -->
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="main-menu">
+                                <ul>
+                                    <li class="has-children position-static">
+                                        <a href="shop.html">商品列表</a>
+                                    </li>
+                                    <li><a href="checkout.html">添加收货地址</a></li>
+                                    <li><a href="cart.html">购物车</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Header Menu End -->
+
+                        <!-- Header Action Start -->
+                        <div class="col-lg-3 col-md-8 col-6">
+                            <div class="header-actions">
+                                <!-- Header My Account Button Start -->
+                                <a href="my-account.html" class="header-action-btn header-action-btn-wishlist">
+                                    <i class="icon-user icons"></i>
+                                </a>
+                                <!-- Header My Account Button End -->
+
+                                <!-- Mobile Menu Hambarger Action Button Start -->
+                                <a href="javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-flex">
+                                    <i class="icon-menu"></i>
+                                </a>
+                                <!-- Mobile Menu Hambarger Action Button End -->
+
+                            </div>
+                        </div>
+                        <!-- Header Action End -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Bottom End -->
+
+    </div>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Area Start -->
+    <div class="section breadcrumb-area bg-name-bright">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-wrapper">
+                        <h2 class="breadcrumb-title">添加收货地址</h2>
+                        <ul>
+                            <li><a href="index.html">首页</a></li>
+                            <li>添加收货地址</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End -->
+
+    <!-- Checkout Section Start -->
+    <div class="section section-margin">
+        <div class="container">
+            <div class="row m-b-n20">
+                <div class="col-lg-6 col-12 m-b-20">
+                    <!-- Checkbox Form Start -->
+                    <form role="form" id="form-address">
+                        <div class="checkbox-form">
+                            <!-- Checkbox Form Title Start -->
+                            <h3 class="title">添加地址</h3>
+                            <!-- Checkbox Form Title End -->
+                                <!-- 名字  Start -->
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>名字<span class="required">*</span></label>
+                                        <input name="name" placeholder="" type="text">
+                                    </div>
+                                </div>
+                                <!-- 名字  End -->
+
+                                <!-- Town or City Name Input Start -->
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <label>省/直辖市<span class="required">*</span></label>
+                                        <input name="provinceName" type="text">
+                                    </div>
+                                </div>
+                                <!-- Town or City Name Input End -->
+
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <label>市<span class="required">*</span></label>
+                                        <input name="cityName" type="text">
+                                    </div>
+                                </div>
+                                <!-- State or Country Input Start -->
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>区<span class="required">*</span></label>
+                                        <input name="areaName" placeholder="区" type="text">
+                                    </div>
+                                </div>
+                                <!-- State or Country Input End -->
+
+                                <!-- Postcode or Zip Input Start -->
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>邮政编码<span class="required">*</span></label>
+                                        <input name="zip" placeholder="邮政编码" type="text">
+                                    </div>
+                                </div>
+                                <!-- Postcode or Zip Input End -->
+
+                                <!-- Address Input Start -->
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <label>详细地址 <span class="required">*</span></label>
+                                        <input name="address" placeholder="详细地址" type="text">
+                                    </div>
+                                </div>
+                                <!-- Address Input End -->
+
+                                <!-- Phone Number Input Start -->
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>手机号码 <span class="required">*</span></label>
+                                        <input name="phone" type="text">
+                                    </div>
+                                </div>
+                                <!-- Phone Number Input End -->
+                                <!--按钮--->
+                                <div class="order-button-payment">
+                                    <input value="提交" type="button" id="btn-address" class="btn btn-primary btn-hover-dark rounded-0 w-100" />
+                                </div>
+
+                            </div>
+                    </form>
+                    <!-- Checkbox Form End -->
+                </div>
+                <div class="col-lg-6 col-12 m-b-20" style="float: right">
+                    <img src="assets/images/banner/1.png">
+                </div>
+                <!-- Your Order Area End -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Checkout Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="section footer-section">
+        <!-- Footer Top Start -->
+        <div class="footer-top bg-name-bright section-padding">
+            <div class="container">
+                <div class="row m-b-n40">
+                    <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="single-footer-widget">
+                            <h1 class="widget-title">关于我们</h1>
+                            <p class="desc-content">Lorem ipsum dolor sit amet, co adipisi elit, sed eiusmod tempor incididunt ut labore et dolore</p>
+                            <!-- Soclial Link Start -->
+                            <!-- Social Link End -->
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="single-footer-widget">
+                            <h2 class="widget-title">常见问题</h2>
+                            <ul class="widget-list">
+                                <li>用户反馈</li>
+                                <li>诚信举报</li>
+                                <li>加入我们</li>
+                                <li>资质规则</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1400">
+                        <div class="single-footer-widget">
+                            <h2 class="widget-title">品牌合作</h2>
+                            <ul class="widget-list">
+                                <li>开放媒体</li>
+                                <li>媒体报道</li>
+                                <li>入驻加盟</li>
+                                <li>@xiaosu.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1600">
+                        <div class="single-footer-widget">
+                            <h2 class="widget-title">客服-1213-3123</h2>
+                            <div class="widget-body">
+                                <p class="desc-content m-b-20">感谢购物，祝你天天开心!</p>
+                                <p class="desc-content m-b-20">&nbsp;&nbsp;商城为你提供生活便捷，给你的身心带来快乐，感谢你的支持</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Top End -->
+    </footer>
+    <!-- Footer Section End -->
+    <script src="assets/js/vendor.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script>
+
+    <!--Main JS-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+
+        $('#btn-address').click(function (){
+            $.ajax({
+                url:'/addresses/add_address',
+                type:'POST',
+                dataType:'JSON',
+                data:$('#form-address').serialize(),
+                success:function (json){
+                    if(json.state==200){
+                        alert("添加成功");
+                        location.href="my-account.html";
+                    }else if(json.state=7001){
+                        alert("添加收货地址超过限制")
+                    }else if(json.state==5000){
+                        alert("添加失败")
+                    }
+                },
+                error:function (xhr){
+                    alert("添加失败"+xhr.message);
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

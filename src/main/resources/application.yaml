@@ -1,0 +1,24 @@
+spring:
+  redis:
+    host: redis地址
+    port: 6379
+    password: redis密码
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段
+  mail:
+    host: smtp.qq.com
+    default-encoding: utf-8
+    username: 邮箱账号
+    password: 邮箱密码
+    properties:
+      mail:
+        smtp:
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+        #表示开启 DEBUG 模式，这样，邮件发送过程的日志会在控制台打印出来，方便排查错误
+        debug: true

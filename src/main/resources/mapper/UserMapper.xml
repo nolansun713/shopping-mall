@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.takeaway.mapper.UserMapper">
+    <!--对应规则-->
+    <resultMap id="UserEntityMap" type="com.takeaway.entity.User">
+        <id column="uid" property="uid"/>
+        <result column="is_delete" property="isDelete"/>
+        <result column="created_user" property="createdUser"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="modified_user" property="modifiedUser"/>
+        <result column="modified_time" property="modifiedTime"/>
+    </resultMap>
+    <!--添加用户-->
+    <insert id="addUser" useGeneratedKeys="true" keyProperty="uid">
+        INSERT INTO
+            t_user (uid,username, password, salt, phone, email, is_delete, created_user, created_time, modified_user, modified_time)
+        VALUES
+            (#{uid},#{username}, #{password}, #{salt}, #{phone}, #{email}, #{isDelete}, #{createdUser}, #{createdTime}, #{modifiedUser}, #{modifiedTime})
+    </insert>
+
+    <select id="findByUsername" resultMap="UserEntityMap">
+        SELECT * FROM t_user WHERE username=#{username}
+    </select>
+
+    <!--修改密码-->
+    <update id="updatePassword">
+        UPDATE t_user SET password=#{password},modified_user=#{modifiedUser},modified_time=#{modifiedTime} WHERE username=#{username}
+    </update>
+    <!--根据用户名查询邮箱-->
+    <select id="findEmail" resultMap="UserEntityMap">
+        SELECT * FROM t_user WHERE email=#{email}
+    </select>
+</mapper>

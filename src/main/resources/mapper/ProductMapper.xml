@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.takeaway.mapper.ProductMapper">
+    <resultMap id="ProductMap" type="com.takeaway.entity.Product">
+        <id column="pid" property="pid"></id>
+        <result column="sell_point" property="sellPoint"></result>
+        <result column="created_time" property="createdTime"></result>
+        <result column="created_user" property="createdUser"></result>
+        <result column="modified_time" property="modifiedTime"></result>
+        <result column="modified_user" property="modifiedUser"></result>
+    </resultMap>
+    <!--最新上架的商品八个-->
+    <select id="findProduct" resultMap="ProductMap">
+        SELECT pid,title,sell_point,price,num,image  FROM t_product WHERE status=1 ORDER BY created_time DESC LIMIT 0,8;
+    </select>
+    <!--最热四个商品-->
+    <select id="hotProduct" resultMap="ProductMap">
+        SELECT pid,title,sell_point,price,num,image  FROM t_product WHERE status=1 ORDER BY priority DESC LIMIT 0,4;
+    </select>
+    <select id="findPid" resultMap="ProductMap">
+        SELECT pid,title,sell_point,price,num,image  FROM t_product WHERE pid=#{pid}
+    </select>
+
+    <select id="productList" resultMap="ProductMap" resultType="com.takeaway.entity.Page">
+
+        SELECT * FROM t_product WHERE status=1  LIMIT  ${pageSize},4;
+    </select>
+    <select id="sumProduct" resultType="java.lang.Integer">
+
+        SELECT COUNT(status) FROM t_product WHERE status=1;
+    </select>
+</mapper>

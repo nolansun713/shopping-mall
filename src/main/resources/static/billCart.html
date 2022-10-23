@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小苏商城</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+
+
+
+</head>
+
+<body>
+<!-- Header Section Start -->
+<div class="header section">
+
+    <!-- Header Bottom Start -->
+    <div class="header-bottom">
+        <div class="header-sticky">
+            <div class="container">
+                <div class="row align-items-center position-relative">
+
+                    <!-- Header Logo Start -->
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="header-logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Site Logo" /></a>
+                        </div>
+                    </div>
+                    <!-- Header Logo End -->
+
+                    <!-- 头部 Start -->
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="main-menu">
+                            <ul>
+                                <li class="has-children position-static">
+                                    <a href="shop.html">商品列表</a>
+                                </li>
+                                <li><a href="checkout.html">添加收货地址</a></li>
+                                <li><a href="#">账单</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- Header Menu End -->
+                    <!-- Header Action Start -->
+                    <div class="col-lg-3 col-md-8 col-6">
+                        <div class="header-actions">
+                            <!-- Header My Account Button Start -->
+                            <a href="my-account.html" class="header-action-btn header-action-btn-wishlist">
+                                <i class="icon-user icons"></i>
+                            </a>
+                            <!-- Header My Account Button End -->
+
+                            <!-- Mobile Menu Hambarger Action Button Start -->
+                            <a href="javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-flex">
+                                <i class="icon-menu"></i>
+                            </a>
+                            <!-- Mobile Menu Hambarger Action Button End -->
+
+                        </div>
+                    </div>
+                    <!-- Header Action End -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Bottom End -->
+
+</div>
+<!-- Header Section End -->
+
+<!-- Breadcrumb Area Start -->
+<div class="section breadcrumb-area bg-name-bright">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="breadcrumb-wrapper">
+                    <h2 class="breadcrumb-title">购物车</h2>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li>购物车</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Area End -->
+
+<!-- 购物车内容 -->
+<div class="section section-margin">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Cart Table Start -->
+                <div class="cart-table table-responsive">
+                    <table class="table table-bordered">
+
+                        <!-- Table Head Start -->
+                        <thead>
+                        <tr>
+                            <th class="pro-thumbnail">商品图片</th>
+                            <th class="pro-title">商品名称</th>
+                            <th class="pro-price">单价</th>
+                            <th class="pro-quantity">数量</th>
+                            <th class="pro-subtotal">总价</th>
+                        </tr>
+                        </thead>
+                        <!-- Table Head End -->
+
+                        <!-- Table Body Start -->
+                        <tbody id="cart-list">
+                        <tr>
+                            <td class="pro-thumbnail"><a href="#"><img class="fit-image" src="assets/images/products/small-product/6.webp" alt="Product" /></a></td>
+                            <td class="pro-title"><a href="#">Learn About Fish Farming</a></td>
+                            <td class="pro-price"><span>$95.00</span></td>
+                            <td class="pro-quantity">
+                                <div class="quantity">
+                                    <div>12</div>
+                                </div>
+                            </td>
+                            <td class="pro-subtotal"><span>$95.00</span></td>
+                        </tr>
+                        </tbody>
+                        <!-- Table Body End -->
+                    </table>
+                </div>
+                <!-- Cart Table End -->
+
+                <!-- 购物车结算按钮 Start -->
+                <div class="cart-button-section m-b-n20" >
+                    <table>
+                        <tr class="total" style="float:right" >
+                            <td><h5>数量:</h5></td>&nbsp;
+                            <td  class="total-amount"><h5 id="sums1">0</h5></td>
+                            <td><h5>合计:</h5></td>&nbsp;
+                            <td  class="total-amount"><h5 id="sums2">$0</h5></td>
+                        </tr>
+                    </table>
+                    <!-- Cart Checktout Button Start -->
+                    <a  style="background-color:cornsilk" id="over-cart"><button >点击支付</button></a>
+                    <!-- Cart Checktout Button End -->
+                </div>
+                <!-- 购物车结算按钮 End -->
+
+            </div>
+        </div>
+
+        <div class="row m-t-50"></div>
+
+    </div>
+</div>
+<footer class="section footer-section">
+
+    <!-- Footer Top Start -->
+    <div class="footer-top bg-name-bright section-padding">
+        <div class="container">
+            <div class="row m-b-n40">
+                <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="single-footer-widget">
+                        <h1 class="widget-title">关于我们</h1>
+                        <p class="desc-content">Lorem ipsum dolor sit amet, co adipisi elit, sed eiusmod tempor incididunt ut labore et dolore</p>
+                        <!-- Soclial Link Start -->
+                        <!-- Social Link End -->
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="single-footer-widget">
+                        <h2 class="widget-title">常见问题</h2>
+                        <ul class="widget-list">
+                            <li>用户反馈</li>
+                            <li>诚信举报</li>
+                            <li>加入我们</li>
+                            <li>资质规则</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="single-footer-widget">
+                        <h2 class="widget-title">品牌合作</h2>
+                        <ul class="widget-list">
+                            <li>开放媒体</li>
+                            <li>媒体报道</li>
+                            <li>入驻加盟</li>
+                            <li>@xiaosu.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1600">
+                    <div class="single-footer-widget">
+                        <h2 class="widget-title">客服-1213-3123</h2>
+                        <div class="widget-body">
+                            <p class="desc-content m-b-20">感谢购物，祝你天天开心!</p>
+                            <p class="desc-content m-b-20">&nbsp;商城为你提供生活便捷，给你的身心带来快乐，感谢你的支持</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Top End -->
+
+</footer>
+<!-- Footer Section End -->
+
+<script src="assets/js/vendor.min.js"></script>
+<script src="assets/js/plugins.min.js"></script>
+
+<!--Main JS-->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        showCartList();
+    });
+    function showCartList() {
+        $("#cart-list").empty();
+        $('#sum-total').empty();
+        $('#over-cart').empty();
+        $.ajax({
+            url: "/cart/cartList",
+            data: location.search.substr(1),
+            type: "GET",
+            dataType: "JSON",
+            success: function(json) {
+                let list = json.data;
+                console.log("count=" + list.length);
+                let allCount = 0;
+                let allPrice = 0;
+                for (let i = 0; i < list.length; i++) {
+                    console.log(list[i].title);
+                    let tr = '<tr>\n' +
+                        '                            <td class="pro-thumbnail"><a href="#"><img class="fit-image" src="#{image}1.webp" alt="Product" /></a></td>\n' +
+                        '                            <td class="pro-title">#{title}</td>\n' +
+                        '                            <td class="pro-price"><span>$#{realPrice}</span></td>\n' +
+                        '                            <td class="pro-quantity">\n' +
+                        '                                <div class="quantity">\n' +
+                        '                                    <div>#{num}</div>\n' +
+                        '                                </div>\n' +
+                        '                            </td>\n' +
+                        '                            <td class="pro-subtotal"><span>$#{totalPrice}</span></td>\n' +
+                        '                        </tr>';
+                    tr = tr.replace(/#{cid}/g, list[i].cid);
+                    tr = tr.replace(/#{image}/g, list[i].image);
+                    tr = tr.replace(/#{title}/g, list[i].title);
+                    tr = tr.replace(/#{realPrice}/g, list[i].realPrice);
+                    tr = tr.replace(/#{num}/g, list[i].num);
+                    tr = tr.replace(/#{totalPrice}/g, list[i].realPrice * list[i].num);
+                    $("#cart-list").append(tr);
+                    let ts='<button onclick="overcart(#{cid})">结算</button>';
+                    ts = ts.replace(/#{cid}/g, list[i].cid);
+                    $("#over-cart").html(ts);
+                    allCount += list[i].num;
+                    allPrice += list[i].realPrice * list[i].num;
+                }
+                $("#sums1").html(allCount);
+                $("#sums2").html(allPrice);
+            }
+        });
+    }
+    function overcart(cid){
+        $.ajax({
+            url:'/cart/'+cid+'/deleteCart',
+            type:"POST",
+            dataType:'JSON',
+            success:function (json){
+                if(json.state==200){
+                    alert("购买成功");
+                    location.href="cart.html";
+                }
+            },
+            error:function (xhr){
+                alert("购买失败");
+            }
+        })
+    }
+</script>
+</body>
+
+</html>

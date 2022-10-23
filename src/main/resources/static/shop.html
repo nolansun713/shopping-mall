@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小苏商城</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Vendor CSS (Icon Font) -->
+
+    <!-- 
+<link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css" />
+<link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+<link rel="stylesheet" href="assets/css/vendor/simple-line-icons.min.css" />
+<link rel="stylesheet" href="assets/css/vendor/themify-icons-min.css" /> 
+ -->
+
+    <!-- Plugins CSS (All Plugins Files) -->
+
+    <!-- 
+<link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
+<link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
+<link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
+<link rel="stylesheet" href="assets/css/plugins/aos.min.css" />
+<link rel="stylesheet" href="assets/css/plugins/nice-select.min.css" /> 
+-->
+
+    <!-- Main Style CSS -->
+
+    <!-- <link rel="stylesheet" href="assets/css/style.css" />  -->
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+
+
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+
+
+
+</head>
+
+<body>
+<!-- Header Section Start -->
+<div class="header section">
+    <!-- Header Bottom Start -->
+    <div class="header-bottom">
+        <div class="header-sticky">
+            <div class="container">
+                <div class="row align-items-center position-relative">
+
+                    <!-- Header Logo Start -->
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="header-logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Site Logo" /></a>
+                        </div>
+                    </div>
+                    <!-- Header Logo End -->
+
+                    <!-- Header Menu Start -->
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="main-menu">
+                            <ul>
+                                <li class="has-children position-static">
+                                    <a href="shop.html">商品列表</a>
+                                </li>
+                                <li><a href="checkout.html">添加收货地址</a></li>
+                                <li><a href="cart.html">购物车</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- Header Menu End -->
+                    <!-- Header Action Start -->
+                    <div class="col-lg-3 col-md-8 col-6">
+
+                        <div class="header-actions">
+                            <!-- Header My Account Button Start -->
+                            <a href="my-account.html" class="header-action-btn header-action-btn-wishlist">
+                                <i class="icon-user icons"></i>
+                            </a>
+                            <!-- Header My Account Button End -->
+
+                            <!-- Mobile Menu Hambarger Action Button Start -->
+                            <a href="javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-flex">
+                                <i class="icon-menu"></i>
+                            </a>
+                            <!-- Mobile Menu Hambarger Action Button End -->
+                        </div>
+                    </div>
+                    <!-- Header Action End -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Bottom End -->
+
+</div>
+<!-- Header Section End -->
+
+<!-- Breadcrumb Area Start -->
+<div class="section breadcrumb-area bg-name-bright">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="breadcrumb-wrapper">
+                    <h2 class="breadcrumb-title">商品列表</h2>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li>商品列表</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Area End -->
+
+<!-- Shop Section Start -->
+<div class="section section-margin">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Shop Wrapper Start -->
+                <div class="row shop_wrapper grid_list" id="shop-list">
+                    <!-- Single Product Start -->
+                    <div class="product col-12" >
+                        <div class="product-inner" >
+                            <div class="thumb">
+                                <a href="single-product.html" class="image">
+                                    <img class="fit-image" src="assets/images/products/medium-product/4.webp" alt="Product">
+                                </a>
+                                <div class="action-wrapper">
+                                    <a href="cart.html" class="action cart" title="Cart"><i class="ti-shopping-cart"></i></a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h5 class="title"><a href="single-product.html">Pet Food Corner</a></h5>
+                                <span class="price">
+                                            <span class="new">$105.00</span>
+                                    </span>
+                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                                <div class="cart-btn action-btn">
+                                    <div class="action-cart-btn-wrapper d-flex">
+                                        <div class="add-to_cart">
+                                            <a class="btn btn-primary btn-hover-dark rounded-0" href="cart.html">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Product End -->
+
+                </div>
+                <!-- Shop Wrapper End -->
+
+                <!--shop toolbar start-->
+                <div class="shop_toolbar_wrapper justify-content-center m-t-50">
+
+                    <!-- Shopt Top Bar Right Start -->
+                    <div class="shop-top-bar-right">
+                        <nav>
+                            <ul class="pagination" id="page-size">
+                                <li class="page-item"><input onclick="shops(1)" name="pageSize" type="button" value="1" id="as-1" class="btn btn-primary btn-hover-dark rounded-0"/></li>
+                                <li  class="page-item"><input onclick="shops(2)" name="pageSize" type="button" value="2" id="as-2" class="btn btn-primary btn-hover-dark rounded-0"/></li>
+                                <li  class="page-item"><input onclick="shops(3)" name="pageSize" type="button" value="3" id="as-3" class="btn btn-primary btn-hover-dark rounded-0"/></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Shopt Top Bar Right End -->
+
+                </div>
+                <!--shop toolbar end-->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Shop Section End -->
+
+<!-- Footer Section Start -->
+<footer class="section footer-section">
+    <!-- Footer Top Start -->
+    <div class="footer-top bg-name-bright section-padding">
+        <div class="container">
+            <div class="row m-b-n40">
+                <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="single-footer-widget">
+                        <h1 class="widget-title">关于我们</h1>
+                        <p class="desc-content">Lorem ipsum dolor sit amet, co adipisi elit, sed eiusmod tempor incididunt ut labore et dolore</p>
+                        <!-- Soclial Link Start -->
+                        <!-- Social Link End -->
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="single-footer-widget">
+                        <h2 class="widget-title">常见问题</h2>
+                        <ul class="widget-list">
+                            <li>用户反馈</li>
+                            <li>诚信举报</li>
+                            <li>加入我们</li>
+                            <li>资质规则</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="single-footer-widget">
+                        <h2 class="widget-title">品牌合作</h2>
+                        <ul class="widget-list">
+                            <li>开放媒体</li>
+                            <li>媒体报道</li>
+                            <li>入驻加盟</li>
+                            <li>@xiaosu.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1600">
+                    <div class="single-footer-widget">
+                        <h2 class="widget-title">客服-1213-3123</h2>
+                        <div class="widget-body">
+                            <p class="desc-content m-b-20">感谢购物，祝你天天开心!</p>
+                            <p class="desc-content m-b-20">&nbsp;&nbsp;商城为你提供生活便捷，给你的身心带来快乐，感谢你的支持</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Top End -->
+</footer>
+<!-- Footer Section End -->
+
+<script src="assets/js/vendor.min.js"></script>
+<script src="assets/js/plugins.min.js"></script>
+
+<!--Main JS-->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+        $(document).ready(function(){
+            showPageList();
+            showPageSize();
+        })
+        function showPageSize(){
+            $('#page-size').empty();
+            $.ajax({
+                url:'/products/toPage',
+                type:'get',
+                dataType:'JSON',
+                success:function (json){
+                    console.log(json)
+                    let pages=parseInt(json.data);
+                    for(let i=1;i<=pages;i++){
+                        let html='<li class="page-item"><input onclick="shops(#{i})" name="pageSize" type="button" value="#{i}" id="as-#{i}" class="btn btn-primary btn-hover-dark rounded-0"/></li>';
+                        html=html.replace(/#{i}/g,i);
+                        $('#page-size').append(html);
+                    }
+                }
+            })
+        }
+        function showPageList(){
+            $('#shop-list').empty();
+            $.ajax({
+                url:'/products/'+1+'/showProductList',
+                type:'get',
+                dataType:'JSON',
+                data:$('#as-1').serialize(),
+                success:function(json){
+                    let list=json.data;
+                    for(let k=0;k<list.length;k++){
+                        let html='\n' +
+                            '                    <!-- Single Product Start -->\n' +
+                            '                    <div class="product col-12" >\n' +
+                            '                        <div class="product-inner" >\n' +
+                            '                            <div class="thumb">\n' +
+                            '                                <a href="single-product.html?pid=#{pid}" class="image">\n' +
+                            '                                    <img class="fit-image" src="#{image}1.webp" alt="Product">\n' +
+                            '                                </a>\n' +
+                            '                                <div class="action-wrapper">\n' +
+                            '                                    <a href="cart.html" class="action cart" title="Cart"><i class="ti-shopping-cart"></i></a>\n' +
+                            '                                </div>\n' +
+                            '                            </div>\n' +
+                            '                            <div class="content">\n' +
+                            '                                <h5 class="title"><a href="single-product.html?pid=#{pid}">#{title}</a></h5>\n' +
+                            '                                <span class="price">\n' +
+                            '                                            <span class="new">$#{price}</span>\n' +
+                            '                                    </span>\n' +
+                            '                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>\n' +
+                            '                                <div class="cart-btn action-btn">\n' +
+                            '                                    <div class="action-cart-btn-wrapper d-flex">\n' +
+                            '                                        <div class="add-to_cart">\n' +
+                            '                                            <a class="btn btn-primary btn-hover-dark rounded-0" href="single-product.html?pid=#{pid}">详情</a>\n' +
+                            '                                        </div>\n' +
+                            '                                    </div>\n' +
+                            '                                </div>\n' +
+                            '\n' +
+                            '                            </div>\n' +
+                            '                        </div>\n' +
+                            '                    </div>\n' +
+                            '                    <!-- Single Product End -->\n' +
+                            '\n' +
+                            '                ';
+                                html = html.replace(/#{pid}/g, list[k].pid);
+                                html = html.replace(/#{title}/g, list[k].title);
+                                html = html.replace(/#{price}/g, list[k].price);
+                                html = html.replace(/#{image}/g, list[k].image);
+                                $("#shop-list").append(html);
+                    }
+                },
+                error:function(){
+                    alert("错误")
+                }
+            })
+        }
+        function shops(sid){
+            $('#shop-list').empty();
+            $.ajax({
+                url:'/products/'+sid+'/showProductList',
+                type:'GET',
+                dataType:'JSON',
+                success:function(json){
+                    let list=json.data;
+                    for(let k=0;k<list.length;k++){
+                        let html='\n' +
+                            '                    <!-- Single Product Start -->\n' +
+                            '                    <div class="product col-12" >\n' +
+                            '                        <div class="product-inner" >\n' +
+                            '                            <div class="thumb">\n' +
+                            '                                <a href="single-product.html?pid=#{pid}" class="image">\n' +
+                            '                                    <img class="fit-image" src="#{image}1.webp" alt="Product">\n' +
+                            '                                </a>\n' +
+                            '                                <div class="action-wrapper">\n' +
+                            '                                    <a href="cart.html" class="action cart" title="Cart"><i class="ti-shopping-cart"></i></a>\n' +
+                            '                                </div>\n' +
+                            '                            </div>\n' +
+                            '                            <div class="content">\n' +
+                            '                                <h5 class="title"><a href="single-product.html?pid=#{pid}">#{title}</a></h5>\n' +
+                            '                                <span class="price">\n' +
+                            '                                            <span class="new">$#{price}</span>\n' +
+                            '                                    </span>\n' +
+                            '                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>\n' +
+                            '                                <div class="cart-btn action-btn">\n' +
+                            '                                    <div class="action-cart-btn-wrapper d-flex">\n' +
+                            '                                        <div class="add-to_cart">\n' +
+                            '                                            <a class="btn btn-primary btn-hover-dark rounded-0" href="single-product.html?pid=#{pid}">详情</a>\n' +
+                            '                                        </div>\n' +
+                            '                                    </div>\n' +
+                            '                                </div>\n' +
+                            '\n' +
+                            '                            </div>\n' +
+                            '                        </div>\n' +
+                            '                    </div>\n' +
+                            '                    <!-- Single Product End -->\n' +
+                            '\n' +
+                            '                ';
+                        html = html.replace(/#{pid}/g, list[k].pid);
+                        html = html.replace(/#{title}/g, list[k].title);
+                        html = html.replace(/#{price}/g, list[k].price);
+                        html = html.replace(/#{image}/g, list[k].image);
+                        $("#shop-list").append(html);
+                    }
+                },
+                error:function(){
+                    alert("错误")
+                }
+            })
+        }
+</script>
+</body>
+
+</html>

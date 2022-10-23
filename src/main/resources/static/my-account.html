@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小苏商城</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+
+
+
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <div class="header section">
+
+        <!-- Header Bottom Start -->
+        <div class="header-bottom">
+            <div class="header-sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+
+                        <!-- Header Logo Start -->
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <div class="header-logo">
+                                <a href="index.html"><img src="assets/images/logo/logo.png" alt="Site Logo" /></a>
+                            </div>
+                        </div>
+                        <!-- Header Logo End -->
+
+                        <!-- Header Menu Start -->
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="main-menu">
+                                <ul>
+                                    <li class="has-children position-static">
+                                        <a href="shop.html">商品列表</a>
+                                    </li>
+                                    <li><a href="checkout.html">添加收货地址</a></li>
+                                    <li><a href="cart.html">购物车</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Header Menu End -->
+
+                        <!-- Header Action Start -->
+                        <div class="col-lg-3 col-md-8 col-6">
+                            <div class="header-actions">
+                                <!-- Header My Account Button Start -->
+                                <a href="my-account.html" class="header-action-btn header-action-btn-wishlist">
+                                    <i class="icon-user icons"></i>
+                                </a>
+                                <!-- Header My Account Button End -->
+
+                                <!-- Mobile Menu Hambarger Action Button Start -->
+                                <a href="javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-flex">
+                                    <i class="icon-menu"></i>
+                                </a>
+                                <!-- Mobile Menu Hambarger Action Button End -->
+
+                            </div>
+                        </div>
+                        <!-- Header Action End -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Bottom End -->
+
+    </div>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Area Start -->
+    <div class="section breadcrumb-area bg-name-bright">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-wrapper">
+                        <h2 class="breadcrumb-title">账户</h2>
+                        <ul>
+                            <li><a href="index.html">首页</a></li>
+                            <li>账户</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End -->
+
+    <!-- My Account Section Start -->
+    <div class="section section-margin">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- My Account Page Start -->
+                    <div class="myaccount-page-wrapper">
+                        <div class="row">
+
+                            <!-- My Account Tab Menu Start -->
+                            <div class="col-lg-3 col-md-4">
+                                <div class="myaccount-tab-menu nav" role="tablist">
+                                    <a href="#address-edit" data-bs-toggle="tab"><i class="fa fa-map-marker"></i> 收货地址</a>
+                                    <a href="updatepassword.html" data-bs-toggle="tab"><i class="fa fa-user"></i> 修改密码</a>
+                                    <a onclick="LogOut()"><i class="fa fa-sign-out"></i>退出</a>
+                                </div>
+                            </div>
+                            <!-- My Account Tab Menu End -->
+
+                            <!-- My Account Tab Content Start -->
+                            <div class="col-lg-9 col-md-8">
+                                <div class="tab-content" id="myaccountContent">
+                                    <div class="tab-pane fade" id="address-edit" role="tabpanel">
+                                        <!--地址显示-->
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th>收货人姓名</th>
+                                                <th>详细地址</th>
+                                                <th>联系电话</th>
+                                                <th colspan="3">操作</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="address-list">
+                                            <tr>
+                                                <td>八戒</td>
+                                                <td>北京市房山区高老庄3排6号</td>
+                                                <td>1380***1234</td>
+                                                <td><a class="btn btn-xs btn-info"><span class="fa fa-edit"></span> 修改</a></td>
+                                                <td><a class="btn btn-xs add-del btn-info"><span class="fa fa-trash-o"></span> 删除</a></td>
+                                                <td><a class="btn btn-xs btn-info"><span class="fa fa-edit"></span> 设置为默认</a></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <a href="checkout.html" class="btn btn-sm btn-primary"><span class="fa fa-plus"></span>新增收货地址</a>
+                                    </div>
+                                    <!-- Single Tab Content End -->
+
+
+                                </div>
+                            </div>
+                            <!-- My Account Tab Content End -->
+
+                        </div>
+                    </div>
+                    <!-- My Account Page End -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- My Account Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="section footer-section">
+
+        <!-- Footer Top Start -->
+        <div class="footer-top bg-name-bright section-padding">
+            <div class="container">
+                <div class="row m-b-n40">
+                    <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="single-footer-widget">
+                            <h1 class="widget-title">关于我们</h1>
+                            <p class="desc-content">Lorem ipsum dolor sit amet, co adipisi elit, sed eiusmod tempor incididunt ut labore et dolore</p>
+                            <!-- Soclial Link Start -->
+                            <!-- Social Link End -->
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="single-footer-widget">
+                            <h2 class="widget-title">常见问题</h2>
+                            <ul class="widget-list">
+                                <li>用户反馈</li>
+                                <li>诚信举报</li>
+                                <li>加入我们</li>
+                                <li>资质规则</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1400">
+                        <div class="single-footer-widget">
+                            <h2 class="widget-title">品牌合作</h2>
+                            <ul class="widget-list">
+                                <li>开放媒体</li>
+                                <li>媒体报道</li>
+                                <li>入驻加盟</li>
+                                <li>@xiaosu.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1600">
+                        <div class="single-footer-widget">
+                            <h2 class="widget-title">客服-1213-3123</h2>
+                            <div class="widget-body">
+                                <p class="desc-content m-b-20">感谢购物，祝你天天开心!</p>
+                                <p class="desc-content m-b-20">&nbsp;&nbsp;商城为你提供生活便捷，给你的身心带来快乐，感谢你的支持</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Top End -->
+
+    </footer>
+    <!-- Footer Section End -->
+    <script src="assets/js/vendor.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script>
+
+    <!--Main JS-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            showAddressList();
+        });
+        function showAddressList(){
+            //清空内容
+            $('#address-list').empty();
+            $.ajax({
+                url: "/addresses",
+                type: "GET",
+                dataType: "JSON",
+                success: function (json) {
+                    let list = json.data;
+                    for (let i = 0; i < list.length; i++) {
+                        console.log(list[i].name);
+                        let address = '<tr>'
+                            + '<td>#{name}</td>'
+                            + '<td>#{province}#{city}#{area}#{address}</td>'
+                            + '<td>#{phone}</td>'
+                            + '<td><a onclick="updateByAid(#{aid})"   class="btn btn-xs btn-info"><span class="fa fa-edit"></span> 修改</a></td>'
+                            + '<td><a onclick="deleteByAid(#{aid})" class="btn btn-xs add-del btn-info"><span class="fa fa-trash-o"></span> 删除</a></td>'
+                            + '<td><a onclick="setDefault(#{aid})" class="btn btn-xs add-def btn-info">设为默认</a></td>'
+                            + '</tr>';
+
+                        address = address.replace(/#{aid}/g, list[i].aid);
+                        address = address.replace("#{name}", list[i].name);
+                        address = address.replace("#{province}", list[i].provinceName);
+                        address = address.replace("#{city}", list[i].cityName);
+                        address = address.replace("#{area}", list[i].areaName);
+                        address = address.replace("#{address}", list[i].address);
+                        address = address.replace("#{phone}", list[i].phone);
+
+                        $("#address-list").append(address);
+                    }
+                    $(".add-def:eq(0)").hide();
+                }
+            });
+        }
+        function setDefault(aid){
+            $.ajax({
+                url:'/addresses/'+aid+'/set_default',
+                type:'GET',
+                dataType: 'JSON',
+                success:function(json){
+                    if(json.state==200){
+                        alert("设置成功");
+                        showAddressList();
+                    }else if(json.state==7002){
+                        alert('非法访问');
+                    }else if(json.state ==7003){
+                        alert('收货地址不存在');
+                    }else if(json.state=5001){
+                        alert("设置失败");
+                    }
+                },
+                error:function (xhr){
+                    alert("设置失败"+xhr.message);
+                }
+            })
+        }
+        function deleteByAid(aid){
+            $.ajax({
+                url:'/addresses/'+aid+'/delete_address',
+                type:'GET',
+                dataType:'JSON',
+                success:function(json){
+                    if(json.state==200){
+                        alert("删除成功");
+                        showAddressList();
+                    }else if(json.state==7002){
+                        alert('非法访问');
+                    }else if(json.state ==7003){
+                        alert('收货地址不存在');
+                    }else if(json.state=5001){
+                        alert("删除失败");
+                    }
+                },
+                error:function(xhr){
+                    alert("删除失败"+xhr.message);
+                }
+            })
+        }
+        function updateByAid(aid){
+            location.href="Updatecheckout.html?aid="+aid;
+        }
+        function LogOut(){
+            $.ajax({
+                url:'/user/logout',
+                type:'GET',
+                dataType:'JSON',
+                success:function(json){
+                    if(json.state==200){
+                        location.href="login.html";
+                    }
+                },
+            })
+        }
+    </script>
+</body>
+
+</html>
