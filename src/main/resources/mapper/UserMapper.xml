@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.takeaway.mapper.UserMapper">
+<mapper namespace="com.takeaway.mapper.UserSide.UserMapper">
     <!--对应规则-->
     <resultMap id="UserEntityMap" type="com.takeaway.entity.User">
         <id column="uid" property="uid"/>

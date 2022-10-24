@@ -1,4 +1,4 @@
-package com.takeaway.mapper;
+package com.takeaway.mapper.UserSide;
 
 import com.takeaway.entity.Address;
 import org.apache.ibatis.annotations.Mapper;

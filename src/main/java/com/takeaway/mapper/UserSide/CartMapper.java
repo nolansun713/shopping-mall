@@ -1,4 +1,4 @@
-package com.takeaway.mapper;
+package com.takeaway.mapper.UserSide;
 
 import com.takeaway.entity.Cart;
 import com.takeaway.entity.CartVo;

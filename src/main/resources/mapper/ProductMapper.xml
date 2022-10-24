@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.takeaway.mapper.ProductMapper">
+<mapper namespace="com.takeaway.mapper.UserSide.ProductMapper">
     <resultMap id="ProductMap" type="com.takeaway.entity.Product">
         <id column="pid" property="pid"></id>
         <result column="sell_point" property="sellPoint"></result>

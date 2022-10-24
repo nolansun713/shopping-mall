@@ -1,8 +1,6 @@
 package com.takeaway.service;
 
 import com.takeaway.entity.User;
-import com.takeaway.mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *

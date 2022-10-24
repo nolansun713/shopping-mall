@@ -1,5 +1,6 @@
-package com.takeaway.controller;
+package com.takeaway.controller.User;
 
+import com.takeaway.controller.BaseController;
 import com.takeaway.entity.Product;
 import com.takeaway.service.IProductService;
 import com.takeaway.until.DataRes;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("products")
-public class ProductController extends BaseController{
+public class ProductController extends BaseController {
     @Autowired
     private IProductService productService;
     @RequestMapping("newList")

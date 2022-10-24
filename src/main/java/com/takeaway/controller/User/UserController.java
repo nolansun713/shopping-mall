@@ -1,10 +1,9 @@
-package com.takeaway.controller;
+package com.takeaway.controller.User;
 ;
+import com.takeaway.controller.BaseController;
 import com.takeaway.entity.User;
 import com.takeaway.service.IUserService;
 import com.takeaway.until.DataRes;
-
-import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +19,7 @@ import java.util.Enumeration;
  */
 @RestController
 @RequestMapping("user")
-public class UserController extends BaseController  {
+public class UserController extends BaseController {
     @Resource
     private IUserService userService;
     /**添加用户**/

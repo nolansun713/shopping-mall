@@ -1,5 +1,6 @@
-package com.takeaway.controller;
+package com.takeaway.controller.User;
 
+import com.takeaway.controller.BaseController;
 import com.takeaway.entity.Address;
 import com.takeaway.service.IAddressService;
 import com.takeaway.until.DataRes;
@@ -18,7 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("addresses")
-public class AddressController  extends BaseController{
+public class AddressController  extends BaseController {
     @Autowired
     IAddressService addressService;
     @PostMapping("add_address")

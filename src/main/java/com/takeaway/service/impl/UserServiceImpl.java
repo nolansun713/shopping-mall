@@ -3,7 +3,7 @@ package com.takeaway.service.impl;
 import cn.hutool.core.util.RandomUtil;
 import com.takeaway.entity.RegexUtils;
 import com.takeaway.entity.User;
-import com.takeaway.mapper.UserMapper;
+import com.takeaway.mapper.UserSide.UserMapper;
 import com.takeaway.service.IUserService;
 import com.takeaway.service.ex.*;
 import lombok.extern.slf4j.Slf4j;

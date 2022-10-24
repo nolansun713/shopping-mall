@@ -3,7 +3,7 @@ package com.takeaway.service.impl;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import com.takeaway.entity.Product;
-import com.takeaway.mapper.ProductMapper;
+import com.takeaway.mapper.UserSide.ProductMapper;
 import com.takeaway.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -47,7 +47,7 @@ public class ProductServiceImpl implements IProductService {
         List<Product> result = productMapper.findProduct();
         //5.存入redis缓存中
         String str=JSONUtil.toJsonStr(result);
-        stringRedisTemplate.opsForValue().set(CACHE_PRODUCT_KEY,str,CACHE_SHOP_TIME, TimeUnit.MINUTES);
+        stringRedisTemplate.opsForValue().set(CACHE_PRODUCT_KEY,str,CACHE_SHOP_TIME+4, TimeUnit.MINUTES);
         return result;
     }
 
@@ -71,7 +71,7 @@ public class ProductServiceImpl implements IProductService {
         //5.将数据缓存到redis
         String str=JSONUtil.toJsonStr(result);
         // 缓存到redis并设置有效期 30分钟
-        stringRedisTemplate.opsForValue().set(CACHE_HOT_PRODUCT_KEY,str,CACHE_SHOP_TIME, TimeUnit.MINUTES);
+        stringRedisTemplate.opsForValue().set(CACHE_HOT_PRODUCT_KEY,str,CACHE_SHOP_TIME+9, TimeUnit.MINUTES);
         return result;
     }
 
@@ -128,7 +128,7 @@ public class ProductServiceImpl implements IProductService {
         List<Product> result=productMapper.productList(currentPage);
         // 写入redis 缓存，并设置有效时间
         String str=JSONUtil.toJsonStr(result);
-        stringRedisTemplate.opsForValue().set(CACHE_SHOP_Limit+pageSize,str,CACHE_SHOP_TIME, TimeUnit.MINUTES);
+        stringRedisTemplate.opsForValue().set(CACHE_SHOP_Limit+pageSize,str,CACHE_SHOP_TIME+6, TimeUnit.MINUTES);
         return result;
     }
 }

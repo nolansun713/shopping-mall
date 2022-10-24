@@ -1,5 +1,6 @@
-package com.takeaway.controller;
+package com.takeaway.controller.User;
 
+import com.takeaway.controller.BaseController;
 import com.takeaway.entity.CartVo;
 import com.takeaway.service.ICartService;
 import com.takeaway.until.DataRes;
@@ -14,7 +15,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("cart")
-public class CartController extends BaseController{
+public class CartController extends BaseController {
     @Autowired
     private ICartService cartService;
     @RequestMapping("add_to_cart")
