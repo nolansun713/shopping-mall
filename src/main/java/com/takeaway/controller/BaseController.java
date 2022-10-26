@@ -63,6 +63,9 @@ public class BaseController {
         }else if(e instanceof EmailSoleException){
             result.setMessage("邮箱已被注册");
             result.setState(6008);
+        }else if(e instanceof ProductNotFoundException){
+            result.setMessage("信息不存在");
+            result.setState(6009);
         }
         return result;
     }
