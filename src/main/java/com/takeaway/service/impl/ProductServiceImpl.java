@@ -5,6 +5,7 @@ import cn.hutool.json.JSONUtil;
 import com.takeaway.entity.Product;
 import com.takeaway.mapper.UserSide.ProductMapper;
 import com.takeaway.service.IProductService;
+import com.takeaway.service.ex.ProductNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -37,16 +38,26 @@ public class ProductServiceImpl implements IProductService {
         //  CACHE_PRODUCT_KEY 储存到redis的product的key
         String productJson=stringRedisTemplate.opsForValue().get(CACHE_PRODUCT_KEY);
         // 2.判断是否存在
-        if(productJson!=null){
+        if(StrUtil.isNotBlank(productJson)){
             // 3.存在，直接返回
             //将字符串转换为List
             List<Product> result= JSONUtil.toList(productJson,Product.class);
             return  result;
         }
+        //判断命中是否为空值
+        if(productJson!=null){
+            throw new ProductNotFoundException("信息不存在");
+        }
         // 4.不存在，进入数据库查询
         List<Product> result = productMapper.findProduct();
+        //若数据查询不到数据，则缓存一个null给redis
+        if(result==null){
+            stringRedisTemplate.opsForValue().set(CACHE_PRODUCT_KEY,"",CACHE_SHOP_TIME+4,TimeUnit.MINUTES);
+            throw new ProductNotFoundException("信息不存在");
+        }
         //5.存入redis缓存中
         String str=JSONUtil.toJsonStr(result);
+
         stringRedisTemplate.opsForValue().set(CACHE_PRODUCT_KEY,str,CACHE_SHOP_TIME+4, TimeUnit.MINUTES);
         return result;
     }
@@ -66,8 +77,17 @@ public class ProductServiceImpl implements IProductService {
             List<Product> result=JSONUtil.toList(hotProductJson,Product.class);
             return result;
         }
+        //判断命中是否为空值
+        if(hotProductJson!=null){
+            throw new ProductNotFoundException("信息不存在");
+        }
         // 4.为空，查询数据库返回
         List<Product> result = productMapper.hotProduct();
+        //若数据查询不到数据，则缓存一个null给redis
+        if(result==null){
+            stringRedisTemplate.opsForValue().set(CACHE_HOT_PRODUCT_KEY,"",CACHE_SHOP_TIME+9,TimeUnit.MINUTES);
+            throw new ProductNotFoundException("信息不存在");
+        }
         //5.将数据缓存到redis
         String str=JSONUtil.toJsonStr(result);
         // 缓存到redis并设置有效期 30分钟
@@ -118,6 +138,10 @@ public class ProductServiceImpl implements IProductService {
             List<Product> result=JSONUtil.toList(shopLimitJson,Product.class);
             return result;
         }
+        //判断命中是否为空值
+        if(shopLimitJson!=null){
+            throw new ProductNotFoundException("信息不存在");
+        }
         // 4.redis没有缓存,则从数据库查询
         Integer pageMax= productMapper.sumProduct();
         Integer row= (pageMax % 4==0)? pageMax/4 : (pageMax/4)+1;
@@ -126,6 +150,11 @@ public class ProductServiceImpl implements IProductService {
         }
         Integer currentPage=(pageSize-1)*4;
         List<Product> result=productMapper.productList(currentPage);
+        //若数据查询不到数据，则缓存一个null给redis
+        if(result==null){
+            stringRedisTemplate.opsForValue().set(CACHE_SHOP_Limit+pageSize,"",CACHE_SHOP_TIME+6,TimeUnit.MINUTES);
+            throw new ProductNotFoundException("信息不存在");
+        }
         // 写入redis 缓存，并设置有效时间
         String str=JSONUtil.toJsonStr(result);
         stringRedisTemplate.opsForValue().set(CACHE_SHOP_Limit+pageSize,str,CACHE_SHOP_TIME+6, TimeUnit.MINUTES);
