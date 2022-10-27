@@ -38,4 +38,3 @@
 
 ![](https://github.com/AlanKafka/xiaosu-shop/blob/master/imges/4.png)
 
-![5](https://github.com/AlanKafka/xiaosu-shop/blob/master/imges/5.png)
